@@ -39,3 +39,16 @@ yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+Generate API Documentation from OpenAPI
+
+```bash
+npx docusaurus gen-api-docs <name>
+````
+
+Replace <name> with the folder name where you want the generated API docs to be stored, e.g. trastpay.
+
+This command uses the @docusaurus/plugin-openapi-docs plugin to automatically generate MDX-based documentation pages and sidebar configuration from an OpenAPI (Swagger) specification file (e.g. trastpay.yaml).
+The generated files are placed in docs/<name>/.
+
+Make sure your OpenAPI YAML file is placed in the project root and the docusaurus.config.js is configured to recognize it.
