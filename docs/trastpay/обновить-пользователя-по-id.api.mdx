@@ -1,0 +1,234 @@
+---
+id: обновить-пользователя-по-id
+title: "Обновить пользователя по ID"
+description: "Обновить пользователя по ID"
+sidebar_label: "Обновить пользователя по ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVM1OGzEQfpXVnEByk7S97an058ChEkLkFOXg7A6J6a7X2A4QrVYCcmilIvUBKvUZUkQELSW8gv1G1XhDQgntoSKHze7MN/Y3nz9PCYprnqNFbSDulCB5jhCDSIGBkBCD4nYADDTuD4XGFGKrh8jAJAPMOcQl2JEKFdJiHzVUVbdGo7Gvi3REkIfFSSEtSksprlQmEm5FIZt7ppAUW1m76O1hYoGB0oVCbQUaytZcFyhjtZB9qBhgzkW2mmGwW+icW4jniKpiYIXNCNM2qNsq5Rahqiih0ahCmnqrF60W/aVoEi0UsYUY3Df33d24mTt3125Kb5Ef+xN366b+E33Ck7Uq0sekZk8vQWi+Yn/v9Mqf+rPI3bqZu/Zn7jIEJ/7UTd21/xIS0eZbYJCjHRQpOWgY+iEfxdAcGtSmWYq0AgYG9cGd84Y6gxgG1qq42cyKhGeDwtj4ZavVanIlYIXTVzdzP90k0Ljxn92PyJ+4qT925/QE8iHJvL304rsjnqsMl95ZyjLXC4jeK6xxjaTISUshd4sg5T2dovdc8j7mKG20sbW5wm5jazNyF0ESP3a3/thNFja5muv0mIDul7uK1vyJm7lLd+EmBHdTdocf+4/1EiE2e+C/EPXjULeIrDeAAalcE3veaDVa1JUqjM25vCfG/5zyH10v3GbxyDZVxoWkncLJlnMHdILEBhjEIoUuAzplCpdljxts66yqKLw/RD2CuNNlcMC14D2SvlNCKgy9pxDv8szgCoPFhYO17fnYWY+APc5sHuRyRBrxbEhfwOADjuohWHUrBgPkKeqwe514U+/xbIfKl4UrF7xidxUbSYLK/hPbvXdltto7wKA3H595kVKJ5oc0iPlhzbEILYfpEGIlZFz2h7xP2HpJ+v0GknxnrA==
+sidebar_class_name: "put api-method"
+info_path: docs/trastpay/user-management-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Обновить пользователя по ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/users/{id}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Обновить пользователя по ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"id","in":"path","required":true,"schema":{"type":"integer"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3><strong
+          className={"openapi-schema__required"}
+        >
+          required
+        </strong>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"name"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"email"}
+          required={false}
+          schemaName={"email"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","format":"email"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Обновлено успешно
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"name"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"email"}
+                        required={false}
+                        schemaName={"email"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"email"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"id\": 0,\n  \"name\": \"string\",\n  \"email\": \"user@example.com\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
