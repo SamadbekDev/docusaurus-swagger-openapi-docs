@@ -1,0 +1,192 @@
+---
+id: получить-пользователя-по-id
+title: "Получить пользователя по ID"
+description: "Получить пользователя по ID"
+sidebar_label: "Получить пользователя по ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVM1q20AQfhUxpwSWWG1z2lugpeRQCKU5GR820sTeVH/ZXYcaIUicQwst9AF66KEv4IaIJE3tvMLsG5VZK26KfepF0s7MNzvzfTOqoVJG5ejQWJD9GgqVI0jQKQjQBUiolBuBAIOnY20wBenMGAXYZIS5AlmDm1QBUTgcooGmGXC0rcrCouWA53HMrxRtYnTldMlp6Ye/oAdq/Sea+890F9HCT+mKWj8FAUlZOCwcw1RVZTpRDOudWMbW65eXRyeYOBBQmbJC4/TyZp1uKlB0Ta481hldDNmBudLZukfAcWly5UB2EU0jwGmXccyhDV2zaTfe3dDpd1rQvf9CN7SgK5r5KbV8jmhOLT9mdEfX1NI8pN0IvvQf6dZPGfSwMdvX4Ij2X4KAHN2oTEHCEAMlLKCE3tiisb1apw0IsGjOHiUfmwwkjJyrZK+XlYnKRqV18kUcxz1VaVir6Rst6BfNQhlL8fwFtf48yHcOPAC6OC4Dj09Iit6oQg0xx8JFewf7a3n3DvYjug7N+Et68Oc0oyu6Z2botutwU+v0m26jLX9BC7qha5pxOLXiMZ65a1e2Bf2kecDf/7X6y4BbWbZ3QADzsyzs2U68E/N4VKV1uQoj2O3J/+jzT9erUXP4wfWqTOmCbwqa1J12fQjagQCpUxgIYH3YXNdHyuKhyZqGzadjNBOQ/YGAM2W0OmLq+zWk2vJ3CvJYZRbXKlhtG2y97dZ8OwKxubLOqIoJc6SyMZ9AwHucLP8bzaARMEKVogm3Lx17SYKVewJZ22sem9Xovn71DprmD4XDAi4=
+sidebar_class_name: "get api-method"
+info_path: docs/trastpay/user-management-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Получить пользователя по ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users/{id}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Получить пользователя по ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"id","in":"path","required":true,"schema":{"type":"integer"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Успешный ответ
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"name"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"email"}
+                        required={false}
+                        schemaName={"email"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"email"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"id\": 0,\n  \"name\": \"string\",\n  \"email\": \"user@example.com\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"404"}
+        value={"404"}
+      >
+        <div>
+          
+          
+          Пользователь не найден
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
