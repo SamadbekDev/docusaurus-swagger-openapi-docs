@@ -42,6 +42,8 @@ This command generates static content into the `build` directory and can be serv
 
 Generate API Documentation from OpenAPI
 
+Before executing the command, make sure you have created or inserted the yaml file inside the example.
+
 ```bash
 npx docusaurus gen-api-docs <name>
 ````
