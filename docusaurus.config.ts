@@ -1,10 +1,7 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
 import type * as Preset from '@docusaurus/preset-classic'
 import type { Config } from '@docusaurus/types'
-import type * as Plugin from '@docusaurus/types/src/plugin'
-import type * as OpenApiPlugin from 'docusaurus-plugin-openapi-docs'
+
 
 const config: Config = {
   title: 'TrastPay API Docs',
@@ -192,11 +189,19 @@ const config: Config = {
         id: 'openapi',
         docsPluginId: 'classic',
         config: {
+          petstore: {
+            specPath: 'examples/petstore.yaml', // локально или скачано из GitHub
+            outputDir: 'docs/petstore',
+            downloadUrl: 'https://raw.githubusercontent.com/SamadbekDev/docusaurus-swagger-openapi-docs/main/examples/petstore.yaml',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          },
           trastpay: {
             specPath: 'examples/trastpay.yaml',
             outputDir: 'docs/trastpay',
             downloadUrl:
-                'https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-template-openapi-docs/main/examples/petstore.yaml', // по желанию
+                'https://raw.githubusercontent.com/SamadbekDev/docusaurus-swagger-openapi-docs/main/examples/trastpay.yaml', // по желанию
             sidebarOptions: {
               groupPathsBy: 'tag',
               categoryLinkSource: 'tag'
@@ -204,7 +209,16 @@ const config: Config = {
           }
         }
       }
-    ]
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: 'openapi-yaml',
+        sourceBaseUrl: 'https://raw.githubusercontent.com/SamadbekDev/docusaurus-swagger-openapi-docs/main/examples/',
+        outDir: 'examples',
+        documents: ['petstore.yaml', 'trastpay.yaml'],
+      },
+    ],
   ],
 
   themes: ['docusaurus-theme-openapi-docs']

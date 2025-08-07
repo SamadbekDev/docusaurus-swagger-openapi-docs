@@ -30,16 +30,14 @@ yarn install
 yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
+This command starts the local development server, generates new yaml if any, and opens a browser window. Most changes take effect without requiring a server restart.
 ### Build
 
 ```bash
 yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
+This command generates static content in the `build` directory, downloads changes/new yaml from the repository and can be hosted using any static content hosting service.
 Generate API Documentation from OpenAPI
 
 Before executing the command, make sure you have created or inserted the yaml file inside the example.
