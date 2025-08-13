@@ -3,6 +3,7 @@ import type * as Preset from '@docusaurus/preset-classic'
 import type { Config } from '@docusaurus/types'
 
 
+// @ts-ignore
 const config: Config = {
   title: 'TrastPay API Docs',
   tagline: 'TrastPay guidelines and documents',
@@ -62,11 +63,34 @@ const config: Config = {
           position: 'left',
           label: 'Docs'
         },
+        // {
+        //   label: 'TrustPay API',
+        //   position: 'left',
+        //   to: '/docs/category/trastpay-api'
+        // }
         {
-          label: 'TrustPay API',
-          position: 'left',
-          to: '/docs/category/trastpay-api'
-        }
+          type: "dropdown",
+          label: "TrustPay",
+          position: "left",
+          items: [
+            {
+              label: "TrustPay API",
+              to: "/docs/category/trastpay-api",
+            },
+            // {
+            //   label: "Petstore (versioned)",
+            //   to: "/category/petstore-versioned-api",
+            // },
+            {
+              label: "Petstore",
+              to: "/docs/category/petstore-api",
+            },
+            {
+              label: "HTTPBin",
+              to: "/docs/category/httpbin-api",
+            },
+          ],
+        },
         // {
         //   href: 'https://github.com/facebook/docusaurus',
         //   label: 'GitHub',
@@ -190,9 +214,17 @@ const config: Config = {
         docsPluginId: 'classic',
         config: {
           petstore: {
-            specPath: 'examples/petstore.yaml', // локально или скачано из GitHub
+            specPath: 'examples/petstore.yaml',
             outputDir: 'docs/petstore',
             downloadUrl: 'https://raw.githubusercontent.com/SamadbekDev/docusaurus-swagger-openapi-docs/main/examples/petstore.yaml',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          },
+          httpbin: {
+            specPath: 'examples/httpbin.yaml',
+            outputDir: 'docs/httpbin',
+            downloadUrl: 'https://raw.githubusercontent.com/SamadbekDev/docusaurus-swagger-openapi-docs/main/examples/httpbin.yaml',
             sidebarOptions: {
               groupPathsBy: 'tag'
             }
@@ -200,8 +232,7 @@ const config: Config = {
           trastpay: {
             specPath: 'examples/trastpay.yaml',
             outputDir: 'docs/trastpay',
-            downloadUrl:
-                'https://raw.githubusercontent.com/SamadbekDev/docusaurus-swagger-openapi-docs/main/examples/trastpay.yaml', // по желанию
+            downloadUrl: 'https://raw.githubusercontent.com/SamadbekDev/docusaurus-swagger-openapi-docs/main/examples/trastpay.yaml',
             sidebarOptions: {
               groupPathsBy: 'tag',
               categoryLinkSource: 'tag'
